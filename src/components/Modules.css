@@ -1,0 +1,112 @@
+/* Shared module styles to ensure consistent look */
+.module-container {
+    padding: clamp(16px, 5vw, 40px);
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.module-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.module-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.module-header p {
+    color: var(--text-muted);
+}
+
+.upload-zone {
+    border: 2px dashed rgba(139, 92, 246, 0.3);
+    border-radius: 20px;
+    padding: 60px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgba(30, 41, 59, 0.4);
+}
+
+.upload-zone:hover {
+    border-color: var(--primary);
+    background: rgba(139, 92, 246, 0.1);
+}
+
+.analysis-results {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result-metric {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+}
+
+.metric-label {
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.metric-value {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.metric-interpretation {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-badge.safe {
+    background: rgba(52, 211, 153, 0.1);
+    color: #34d399;
+}
+
+.status-badge.caution {
+    background: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+}
+
+.status-badge.danger {
+    background: rgba(248, 113, 113, 0.1);
+    color: #f87171;
+}
+
+.analyzing-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.spin-icon {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
